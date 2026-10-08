@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Record Manager</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo-area">
+        <img src="grass-block.png" alt="Minecraft grass block" />
+      </div>
+
+      <div class="title-area">
+        <h1>CLASS RECORD MANAGER</h1>
+        <p>Manage your class records easily!!!</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card student-card">
+        <div class="card-title">
+          <div class="small-image">
+            <img src="grass-block.png" alt="Grass block" />
+          </div>
+          <h2>STUDENT LIST</h2>
+        </div>
+
+        <div class="student-list" id="studentList"></div>
+
+        <div class="total">
+          <span>Total Students:</span>
+          <strong id="totalStudents">0</strong>
+        </div>
+      </section>
+
+      <div class="right-column">
+        <section class="card">
+          <div class="card-title">
+            <div class="small-image">
+              <img src="grass-block.png" alt="Grass block" />
+            </div>
+            <h2>ADD STUDENT</h2>
+          </div>
+
+          <div class="input-row">
+            <input
+              type="text"
+              id="studentName"
+              placeholder="Enter student name..."
+            />
+            <button class="green-button" id="addStudent">ADD</button>
+          </div>
+          <p id="addMessage"></p>
+        </section>
+
+        <section class="card">
+          <div class="card-title">
+            <div class="small-image">
+              <img src="grass-block.png" alt="Grass block" />
+            </div>
+            <h2>REMOVE LAST STUDENT</h2>
+          </div>
+
+          <button class="red-button" id="removeStudent">REMOVE LAST</button>
+        </section>
+
+        <section class="card">
+          <div class="card-title">
+            <div class="small-image">
+              <img src="grass-block.png" alt="Grass block" />
+            </div>
+            <h2>FIND STUDENT BY INDEX</h2>
+          </div>
+
+          <div class="input-row">
+            <input
+              type="number"
+              id="studentIndex"
+              placeholder="Enter index..."
+            />
+            <button class="blue-button" id="findStudent">FIND</button>
+          </div>
+
+          <div class="result" id="findResult">Result:</div>
+        </section>
+      </div>
+
+      <section class="card">
+        <div class="card-title">
+          <div class="small-image">
+            <img src="grass-block.png" alt="Grass block" />
+          </div>
+          <h2>JOIN ITEMS</h2>
+        </div>
+
+        <div class="input-row">
+          <input type="text" id="separator" placeholder="Enter separator..." />
+          <button class="purple-button" id="joinItems">JOIN</button>
+        </div>
+
+        <div class="result" id="joinResult">Result:</div>
+      </section>
+
+      <section class="card">
+        <div class="card-title">
+          <div class="small-image">
+            <img src="grass-block.png" alt="Grass block" />
+          </div>
+          <h2>CONVERT TO STRING</h2>
+        </div>
+
+        <button class="brown-button" id="toString">TO STRING</button>
+
+        <div class="result" id="stringResult">Result:</div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Class Record Manager • Group 1</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

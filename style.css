@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Press Start 2P", Arial, sans-serif;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #222;
+}
+
+.header {
+  min-height: 250px;
+  background-image: url("nav\ bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 40px 8%;
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.logo-area,
+.title-area {
+  position: relative;
+  z-index: 1;
+}
+
+.logo-area {
+  width: 110px;
+  height: 110px;
+  border: 3px solid white;
+  overflow: hidden;
+}
+
+.logo-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title-area {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+.title-area h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.title-area p {
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 3px solid #6b4928;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.card-title h2 {
+  font-size: 19px;
+  color: #3f7d20;
+}
+
+.small-image {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #6b4928;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.small-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.student-list {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.student {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  border-bottom: 1px dashed #ddd;
+}
+
+.student:last-child {
+  border-bottom: none;
+}
+
+.student span {
+  color: #4f8c32;
+  font-weight: bold;
+  width: 25px;
+}
+
+.student p {
+  font-size: 16px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #f1eadc;
+  border-radius: 5px;
+}
+
+.total strong {
+  background-color: #4f8f29;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-family: "Press Start 2P", Arial, sans-serif;
+  font-size: 11px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #579238;
+}
+
+button {
+  border: none;
+  padding: 12px 22px;
+  color: white;
+  font-family: "Press Start 2P", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.green-button {
+  background-color: #4f8f29;
+}
+
+.green-button:hover {
+  background-color: #3b6f1e;
+}
+
+.red-button {
+  background-color: #b8322b;
+  width: 100%;
+}
+
+.red-button:hover {
+  background-color: #932721;
+}
+
+.blue-button {
+  background-color: #3068a5;
+}
+
+.blue-button:hover {
+  background-color: #245283;
+}
+
+.purple-button {
+  background-color: #7040a8;
+}
+
+.purple-button:hover {
+  background-color: #572f85;
+}
+
+.brown-button {
+  background-color: #79502d;
+  width: 100%;
+}
+
+.brown-button:hover {
+  background-color: #5e3d22;
+}
+
+.result {
+  margin-top: 15px;
+  padding: 12px;
+  min-height: 40px;
+  background-color: #f5f5f5;
+  border-left: 4px solid #4f8f29;
+  color: #555;
+  font-family: "Press Start 2P", Arial, sans-serif;
+  font-size: 11px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  background-color: #5a391e;
+  color: white;
+  font-family: "Press Start 2P", Arial, sans-serif;
+  font-size: 11px;
+}
+
+@media (max-width: 750px) {
+  .header {
+    min-height: 200px;
+    padding: 30px;
+  }
+  .title-area h1 {
+    font-size: 28px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
